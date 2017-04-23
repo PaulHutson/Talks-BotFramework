@@ -56,6 +56,8 @@ namespace BotFramework_WebTest.BotFramework
                 connectingClient.UserName = activity.From.Name;
                 connectingClient.BotURL = activity.ServiceUrl;
                 connectingClient.ConversationAccount = activity.Conversation;
+                connectingClient.FromID = activity.Recipient.Id;
+                connectingClient.ChannelType = activity.ChannelId;
 
                 // Add it to the list of clients - will be useful for later
                 Global.botClients.Add(connectingClient);
@@ -98,14 +100,22 @@ namespace BotFramework_WebTest.BotFramework
         }
     }
 
+    /// <summary>
+    /// Utility class for Bot Clients
+    /// </summary>
     public static class BotClientUtility
     {
+        /// <summary>
+        /// Send a message to a bot client
+        /// </summary>
+        /// <param name="bc">The Bot client</param>
+        /// <param name="message">The message to send</param>
         public static async void SendMessage(BotClient bc, string message)
         {
             ConnectorClient connector = new ConnectorClient(new Uri(bc.BotURL));
             IMessageActivity newMessage = Microsoft.Bot.Connector.Activity.CreateMessageActivity();
             newMessage.Type = ActivityTypes.Message;
-            newMessage.From = new ChannelAccount("<BotId>", "<BotName>");
+            newMessage.From = new ChannelAccount(bc.FromID);
             newMessage.Conversation = bc.ConversationAccount;
             newMessage.Recipient = new ChannelAccount(bc.UserID);
             newMessage.Text = message;
@@ -119,5 +129,7 @@ namespace BotFramework_WebTest.BotFramework
         public string UserName { get; set; }
         public ConversationAccount ConversationAccount { get; set; }
         public string BotURL { get; set; }
+        public string FromID { get; set; }
+        public string ChannelType { get; set; }
     }
 }

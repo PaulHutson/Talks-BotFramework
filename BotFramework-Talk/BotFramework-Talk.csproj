@@ -9,12 +9,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{C9F56B18-C9AE-4539-9F78-3E50B7114A0F}</ProjectGuid>
+    <ProjectGuid>{D6478F05-6DBC-447F-9B4B-2BF86E009CBA}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BotFramework_WebTest</RootNamespace>
-    <AssemblyName>BotFramework-WebTest</AssemblyName>
+    <RootNamespace>BotFramework_Talk</RootNamespace>
+    <AssemblyName>BotFramework-Talk</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -24,7 +24,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
-    <ApplicationInsightsResourceId>/subscriptions/f61f9592-505b-4383-86d1-d47c9b6b3f26/resourcegroups/Default-ApplicationInsights-EastUS/providers/microsoft.insights/components/BotFramework-WebTest</ApplicationInsightsResourceId>
+    <ApplicationInsightsResourceId>/subscriptions/f61f9592-505b-4383-86d1-d47c9b6b3f26/resourcegroups/Default-ApplicationInsights-EastUS/providers/microsoft.insights/components/BotFramework-Talk</ApplicationInsightsResourceId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -72,25 +72,11 @@
       <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Microsoft.Bot.Connector, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\Bot Application1\Bot Application1\bin\Microsoft.Bot.Connector.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System.Net" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Desktop\DLLS\System.Net.Http.Formatting.dll</HintPath>
-    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -100,14 +86,6 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Desktop\DLLS\System.Web.Http.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Desktop\DLLS\System.Web.Http.WebHost.dll</HintPath>
-    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -118,8 +96,41 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-    <None Include="Properties\PublishProfiles\BotFrameworkTalk - FTP.pubxml" />
-    <None Include="Properties\PublishProfiles\BotFrameworkTalk - Web Deploy.pubxml" />
+    <Content Include="package.json" />
+    <Content Include="css\reveal.scss" />
+    <Content Include="css\theme\README.md" />
+    <Content Include="css\theme\source\beige.scss" />
+    <Content Include="css\theme\source\black.scss" />
+    <Content Include="css\theme\source\blood.scss" />
+    <Content Include="css\theme\source\league.scss" />
+    <Content Include="css\theme\source\moon.scss" />
+    <Content Include="css\theme\source\night.scss" />
+    <Content Include="css\theme\source\serif.scss" />
+    <Content Include="css\theme\source\simple.scss" />
+    <Content Include="css\theme\source\sky.scss" />
+    <Content Include="css\theme\source\solarized.scss" />
+    <Content Include="css\theme\source\white.scss" />
+    <Content Include="css\theme\template\mixins.scss" />
+    <Content Include="css\theme\template\settings.scss" />
+    <Content Include="css\theme\template\theme.scss" />
+    <Content Include="lib\font\league-gothic\league-gothic.eot" />
+    <Content Include="lib\font\league-gothic\league-gothic.ttf" />
+    <Content Include="lib\font\league-gothic\league-gothic.woff" />
+    <Content Include="lib\font\league-gothic\LICENSE" />
+    <Content Include="lib\font\source-sans-pro\LICENSE" />
+    <Content Include="lib\font\source-sans-pro\source-sans-pro-italic.eot" />
+    <Content Include="lib\font\source-sans-pro\source-sans-pro-italic.ttf" />
+    <Content Include="lib\font\source-sans-pro\source-sans-pro-italic.woff" />
+    <Content Include="lib\font\source-sans-pro\source-sans-pro-regular.eot" />
+    <Content Include="lib\font\source-sans-pro\source-sans-pro-regular.ttf" />
+    <Content Include="lib\font\source-sans-pro\source-sans-pro-regular.woff" />
+    <Content Include="lib\font\source-sans-pro\source-sans-pro-semibold.eot" />
+    <Content Include="lib\font\source-sans-pro\source-sans-pro-semibold.ttf" />
+    <Content Include="lib\font\source-sans-pro\source-sans-pro-semibold.woff" />
+    <Content Include="lib\font\source-sans-pro\source-sans-pro-semibolditalic.eot" />
+    <Content Include="lib\font\source-sans-pro\source-sans-pro-semibolditalic.ttf" />
+    <Content Include="lib\font\source-sans-pro\source-sans-pro-semibolditalic.woff" />
+    <Content Include="plugin\markdown\example.md" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -128,25 +139,79 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Global.asax" />
-    <Content Include="index.aspx" />
+    <Content Include="css\print\paper.css" />
+    <Content Include="css\print\pdf.css" />
+    <Content Include="css\reveal.css" />
+    <Content Include="css\theme\beige.css" />
+    <Content Include="css\theme\black.css" />
+    <Content Include="css\theme\blood.css" />
+    <Content Include="css\theme\league.css" />
+    <Content Include="css\theme\moon.css" />
+    <Content Include="css\theme\night.css" />
+    <Content Include="css\theme\serif.css" />
+    <Content Include="css\theme\simple.css" />
+    <Content Include="css\theme\sky.css" />
+    <Content Include="css\theme\solarized.css" />
+    <Content Include="css\theme\white.css" />
+    <Content Include="Gruntfile.js" />
+    <Content Include="images\BotBuilder.png" />
+    <Content Include="images\BotFramework-AddABot.png" />
+    <Content Include="images\BotImage.jpg" />
+    <Content Include="images\Emulator.png" />
+    <Content Include="images\FrameworkConnections.png" />
+    <Content Include="images\skype-hero-sm.mp4" />
+    <Content Include="images\SlackMud-Homepage.png" />
+    <Content Include="index.html" />
+    <Content Include="js\reveal.js" />
+    <Content Include="lib\css\zenburn.css" />
+    <Content Include="lib\font\league-gothic\league-gothic.css" />
+    <Content Include="lib\font\source-sans-pro\source-sans-pro.css" />
+    <Content Include="lib\js\classList.js" />
+    <Content Include="lib\js\head.min.js" />
+    <Content Include="lib\js\html5shiv.js" />
+    <Content Include="plugin\highlight\highlight.js" />
+    <Content Include="plugin\leap\leap.js" />
+    <Content Include="plugin\markdown\example.html" />
+    <Content Include="plugin\markdown\markdown.js" />
+    <Content Include="plugin\markdown\marked.js" />
+    <Content Include="plugin\math\math.js" />
+    <Content Include="plugin\multiplex\client.js" />
+    <Content Include="plugin\multiplex\index.js" />
+    <Content Include="plugin\multiplex\master.js" />
+    <Content Include="plugin\notes-server\client.js" />
+    <Content Include="plugin\notes-server\index.js" />
+    <Content Include="plugin\notes-server\notes.html" />
+    <Content Include="plugin\notes\notes.html" />
+    <Content Include="plugin\notes\notes.js" />
+    <Content Include="plugin\print-pdf\print-pdf.js" />
+    <Content Include="plugin\remotes\remotes.js" />
+    <Content Include="plugin\search\search.js" />
+    <Content Include="plugin\zoom-js\zoom.js" />
+    <Content Include="test\examples\assets\image1.png" />
+    <Content Include="test\examples\assets\image2.png" />
+    <Content Include="test\examples\barebones.html" />
+    <Content Include="test\examples\embedded-media.html" />
+    <Content Include="test\examples\math.html" />
+    <Content Include="test\examples\slide-backgrounds.html" />
+    <Content Include="test\examples\slide-transitions.html" />
+    <Content Include="test\qunit-1.12.0.css" />
+    <Content Include="test\qunit-1.12.0.js" />
+    <Content Include="test\test-markdown-element-attributes.html" />
+    <Content Include="test\test-markdown-element-attributes.js" />
+    <Content Include="test\test-markdown-slide-attributes.html" />
+    <Content Include="test\test-markdown-slide-attributes.js" />
+    <Content Include="test\test-markdown.html" />
+    <Content Include="test\test-markdown.js" />
+    <Content Include="test\test-pdf.html" />
+    <Content Include="test\test-pdf.js" />
+    <Content Include="test\test.html" />
+    <Content Include="test\test.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BotFramework\MessagesController.cs" />
-    <Compile Include="BotFramework\WebAPIConfig.cs" />
-    <Compile Include="Global.asax.cs">
-      <DependentUpon>Global.asax</DependentUpon>
-    </Compile>
-    <Compile Include="index.aspx.cs">
-      <DependentUpon>index.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="index.aspx.designer.cs">
-      <DependentUpon>index.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -160,9 +225,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>61484</DevelopmentServerPort>
+          <DevelopmentServerPort>51994</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:61484/</IISUrl>
+          <IISUrl>http://localhost:51994/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
